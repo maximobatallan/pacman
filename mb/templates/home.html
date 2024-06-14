@@ -29,13 +29,7 @@
       <!--  hero area start  -->
       <!--  hero area start  -->
       <div>
-         <style>
-            body {
-              margin: 0;
-              background-color: black;
-              padding: 10px 20px;
-            }
-          </style>
+      
           <p
             style="
               color: white;
@@ -60,11 +54,7 @@
           <script src="static/eventListeners.js"></script>
           <script src="static/setup.js"></script>
           <script src="static/index.js"></script><style>
-            body {
-              margin: 0;
-              background-color: black;
-              padding: 10px 20px;
-            }
+            
           </style>
           <p
             style="
@@ -76,8 +66,20 @@
           >
             <span>Score: </span><span id="scoreEl">0</span>
           </p>
-          <canvas></canvas>
-          
+         
+          <div id="controls">
+            <div class="row">
+                <button id="up" class="control-button"><span>&uarr;</span></button>
+            </div>
+            <div class="row">
+                <button id="left" class="control-button"><span>&larr;</span></button>
+                <button id="right" class="control-button"><span>&rarr;</span></button>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <button id="down" class="control-button"><span>&darr;</span></button>
+            </div>
+        </div>
   
           
           <script src="{% static 'js/utils.js' %}"></script>

@@ -1,10 +1,10 @@
-{% load static%}
-
-   
-    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
     <!-- easyzoom css -->
     <link rel="stylesheet" href="{% static 'css/easyzoom.css' %}">
-      <!-- slicknav css -->
+    <!-- slicknav css -->
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <!-- jquery ui css -->
     <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
@@ -15,95 +15,37 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    
-
-       
-
-
-        {% block content %}
-   
-   <body>
-     
-
-
-      <!--  hero area start  -->
-      <!--  hero area start  -->
-      <div>
-      
-          <p
-            style="
-              color: white;
-              font-family: sans-serif;
-              font-size: 14px;
-              margin-bottom: 6px;
-            "
-          >
-            <span>Score: </span><span id="scoreEl">0</span>
-          </p>
-          <canvas></canvas>
-          
-          
-          
-          
-          <script src="static/utils.js"></script>
-          <script src="static/classes/Boundary.js"></script>
-          <script src="static/classes/Ghost.js"></script>
-          <script src="static/classes/Pellet.js"></script>
-          <script src="static/classes/Player.js"></script>
-          <script src="static/classes/PowerUp.js"></script>
-          <script src="static/eventListeners.js"></script>
-          <script src="static/setup.js"></script>
-          <script src="static/index.js"></script><style>
-            
-          </style>
-          <p
-            style="
-              color: white;
-              font-family: sans-serif;
-              font-size: 14px;
-              margin-bottom: 6px;
-            "
-          >
-            <span>Score: </span><span id="scoreEl">0</span>
-          </p>
-         
-          <div id="controls">
-            <div class="row">
-                <button id="up" class="control-button"><span>&uarr;</span></button>
-            </div>
-            <div class="row">
-                <button id="left" class="control-button"><span>&larr;</span></button>
-                <button id="right" class="control-button"><span>&rarr;</span></button>
-            </div>
-            <div class="row"></div>
-            <div class="row">
-                <button id="down" class="control-button"><span>&darr;</span></button>
-            </div>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% block content %}
+    <div class="game-container">
+        <canvas></canvas>
+    </div>
+    <p class="texto">
+        <span>Score: </span><span id="scoreEl">0</span>
+    </p>
+    <div id="controls">
+        <div class="row">
+            <button id="up" class="control-button"><span>&uarr;</span></button>
         </div>
-  
-          
-          <script src="{% static 'js/utils.js' %}"></script>
-          <script src="{% static 'js/classes/Boundary.js' %}"></script>
-          <script src="{% static 'js/classes/Ghost.js' %}"></script>
-          <script src="{% static 'js/classes/Pellet.js '%}"></script>
-          <script src="{% static 'js/classes/Player.js' %}"></script>
-          <script src="{% static 'js/classes/PowerUp.js' %}"></script>
-          <script src="{% static 'js/eventListeners.js' %}"></script>
-          <script src="{% static 'js/setup.js' %}"></script>
-          <script src="{% static 'js/index.js' %}"></script>
-         
-      </div>
-      <!--  hero area end  -->
-      <!--  hero area end  -->
-
-      
-  
-
-
-
-      
-      
-      {% endblock %}
-        
-
+        <div class="row">
+            <button id="left" class="control-button"><span>&larr;</span></button>
+            <button id="right" class="control-button"><span>&rarr;</span></button>
+        </div>
+        <div class="row">
+            <button id="down" class="control-button"><span>&darr;</span></button>
+        </div>
+    </div>
+    <script src="{% static 'js/utils.js' %}"></script>
+    <script src="{% static 'js/classes/Boundary.js' %}"></script>
+    <script src="{% static 'js/classes/Ghost.js' %}"></script>
+    <script src="{% static 'js/classes/Pellet.js' %}"></script>
+    <script src="{% static 'js/classes/Player.js' %}"></script>
+    <script src="{% static 'js/classes/PowerUp.js' %}"></script>
+    <script src="{% static 'js/eventListeners.js' %}"></script>
+    <script src="{% static 'js/setup.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    {% endblock %}
+</body>
 </html>

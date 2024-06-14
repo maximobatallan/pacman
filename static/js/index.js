@@ -32,6 +32,7 @@ const ghosts = [
     color: 'pink',
   }),
 ]
+
 const player = new Player({
   position: {
     x: Boundary.width + Boundary.width / 2,
@@ -42,6 +43,31 @@ const player = new Player({
     y: 0,
   },
 })
+
+// Añadir controladores de eventos a los botones
+const buttonUp = document.getElementById('up');
+const buttonLeft = document.getElementById('left');
+const buttonDown = document.getElementById('down');
+const buttonRight = document.getElementById('right');
+
+buttonUp.addEventListener('click', () => {
+    player.moveUp(boundaries);
+});
+
+buttonLeft.addEventListener('click', () => {
+    player.moveLeft(boundaries);
+});
+
+buttonDown.addEventListener('click', () => {
+    player.moveDown(boundaries);
+});
+
+buttonRight.addEventListener('click', () => {
+    player.moveRight(boundaries);
+});
+
+
+
 const keys = {
   w: {
     pressed: false,

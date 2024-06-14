@@ -1,0 +1,42 @@
+#controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column; /* Columnas para las filas */
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.control-button {
+    width: 60px; /* Ancho de cada botón */
+    height: 60px; /* Altura de cada botón */
+    margin: 5px; /* Espacio entre los botones */
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-button span {
+    position: relative; /* Posición relativa para las flechas */
+}
+
+#controls button:hover {
+    background-color: #cccccc;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(241, 0, 0);
+    padding: 10px 20px;
+  }
